@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts About India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .fact {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Facts About India</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Diverse Languages",
+                "description": "India is home to more than 1,600 spoken languages, with Hindi and English being the most widely used for official purposes. The constitution recognizes 22 languages under the Eighth Schedule."
+            },
+            {
+                "fact": "Cultural Heritage",
+                "description": "India has a rich cultural heritage, with numerous festivals celebrated throughout the year, including Diwali, Holi, Eid, Christmas, and Pongal, reflecting its diverse religious practices."
+            },
+            {
+                "fact": "Geographical Diversity",
+                "description": "India is the seventh-largest country in the world by land area, featuring a wide range of geographical features, including the Himalayan mountain range, deserts, forests, and coastal regions."
+            },
+            {
+                "fact": "Population",
+                "description": "India is the second-most populous country in the world, with over 1.4 billion people, accounting for about 17% of the global population."
+            },
+            {
+                "fact": "Historical Sites",
+                "description": "India is home to 40 UNESCO World Heritage Sites, including the Taj Mahal, Qutub Minar, and the Red Fort, showcasing its historical and architectural significance."
+            },
+            {
+                "fact": "Economy",
+                "description": "India has one of the world's largest economies, classified as a newly industrialized country. It is known for its IT and software services, agriculture, textiles, and pharmaceuticals."
+            },
+            {
+                "fact": "Yoga and Spirituality",
+                "description": "India is the birthplace of yoga and various spiritual practices. It has a long tradition of meditation and wellness, attracting people from around the world seeking spiritual growth."
+            },
+            {
+                "fact": "Wildlife",
+                "description": "India is known for its diverse wildlife and is home to several national parks and wildlife sanctuaries, including Ranthambore and Jim Corbett National Park, which protect endangered species like the Bengal tiger."
+            },
+            {
+                "fact": "Cuisine",
+                "description": "Indian cuisine is renowned for its variety and use of spices. Each region has its own specialties, with popular dishes like biryani, dosa, butter chicken, and various types of curries."
+            },
+            {
+                "fact": "Space Exploration",
+                "description": "India has made significant strides in space exploration, with the Indian Space Research Organisation (ISRO) successfully launching missions like Mars Orbiter Mission (Mangalyaan) and Chandrayaan for lunar exploration."
+            }
+        ];
+
+        function displayFacts() {
+            const factsContainer = document.getElementById('facts-container');
+            facts.forEach(fact => {
+                const factDiv = document.createElement('div');
+                factDiv.classList.add('fact');
+                factDiv.innerHTML = `<strong>${fact.fact}</strong><p>${fact.description}</p>`;
+                factsContainer.appendChild(factDiv);
+            });
+        }
+
+        window.onload = displayFacts;
+    </script>
+</body>
+</html>
